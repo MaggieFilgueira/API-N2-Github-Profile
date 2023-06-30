@@ -4,6 +4,7 @@ let name = document.getElementById("name");
 let followers = document.getElementById("followers");
 let repos = document.getElementById("repos");
 let profileLink = document.getElementById("profileLink");
+let main = document.getElementById("main");
 
 document.getElementById('search').addEventListener("input", () => {
     let user = document.getElementById('search').value; 
@@ -11,6 +12,7 @@ document.getElementById('search').addEventListener("input", () => {
 
     axios.get(APIURL)
         .then(res => {
+            main.style.display= 'block';
             let usuario = res.data;
             avatar.src = usuario.avatar_url;
             name.innerHTML = usuario.login;

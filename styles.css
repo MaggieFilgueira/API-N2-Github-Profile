@@ -37,6 +37,10 @@ body {
     0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
+#main {
+  display: none;
+}
+
 .user-form input::placeholder {
   color: #bbb;
 }
